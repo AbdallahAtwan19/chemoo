@@ -1,0 +1,101 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+.center-text {
+  font-size: 4rem; /* حجم النص */
+  color: #FFFFFF; /* لون النص */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* تأثير ظل النص */
+  font-family: 'Arial', sans-serif; /* نوع الخط */
+  text-align: center; /* توسيط النص */
+  z-index:99;
+}
+ body {
+  margin: 0;
+  padding: 0;
+  background-color: #e37254;
+  /* overflow: hidden; */
+}
+#turtle {
+  position: absolute;
+  width: 100px; /* حجم السلحفاة */
+  height: 100px;
+  transition: transform 1s linear; /* لتنعيم الحركة */
+}
+.container {
+  height: 100vh;
+  overflow: hidden;
+}
+#couple {
+  max-height: 100%;
+  width: 100%;
+}
+
+#girl-hair {
+  fill:url(#hair-gradient);
+}
+#girl-eye {
+  fill: green;
+}
+
+#girl-earring {
+  fill: #8d8d8d;
+}
+#girl-skirt, #girl-shirt {
+  fill: #791e43;
+}
+#boy-pants {
+  fill: #848487;
+}
+#boy-sleeve {
+  fill: #b8bcbb;
+}
+
+#boy-shirt {
+  fill: #256e89;
+}
+
+#boy-hat-1 {
+   fill: #2e6773;
+}
+#boy-hat-2 {
+   fill: #4f3723;
+}
+
+#couple,
+#heart, 
+#triangle-light
+{
+  visibility: hidden;
+}
+ #triangle-light {
+  fill:url(#light-gradient);
+  fill-opacity: 0.3;
+} 
+
+#ground {
+  fill: #5c5757;
+}
+
+.heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+}
+.heart:before,
+.heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: red;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+.heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin :100% 100%;
+}
