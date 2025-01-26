@@ -1,0 +1,84 @@
+body {
+  background: #131b21;
+}
+/* From Uiverse.io by Navarog21 */ 
+button {
+  width: 10em;
+  position: relative;
+  height: 3.5em;
+  border: 3px ridge #149CEA;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #212121;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+button::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #212121;
+  transition: 0.5s;
+}
+
+button:hover::before, button:hover::after {
+  transform: scale(0)
+}
+
+button:hover {
+  box-shadow: inset 0px 0px 25px #1479EA;
+}
+.center-text {
+  font-size: 4rem; /* حجم النص */
+  color: #FFFFFF; /* لون النص */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* تأثير ظل النص */
+  font-family: 'Arial', sans-serif; /* نوع الخط */
+  text-align: center; /* توسيط النص */
+  z-index:99;
+}
+.container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+svg#flower-frame {
+  height: 90vh;
+  width: 100%;
+}
+
+
+
+#Footer_group_1_,
+[id^=PinkFlowerGroup],
+[id^=BaseGroup] path,
+[id^=LeafGroup] path,
+path[id^=Stroke],
+g[id^=BudGroup] g[id^=BudGroup] g[id^=Bud],
+#Bud8_1_,
+#Bud10_1_,
+#Bud23_1_,
+#Bud26_1_,
+[id^=Dots],
+[id^=Flourish] {
+  visibility: hidden;
+}

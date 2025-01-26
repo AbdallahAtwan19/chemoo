@@ -1,52 +1,5 @@
-body {
-  background: #131b21;
-}
-/* From Uiverse.io by Navarog21 */ 
-button {
-  width: 10em;
-  position: relative;
-  height: 3.5em;
-  border: 3px ridge #149CEA;
-  outline: none;
-  background-color: transparent;
-  color: white;
-  transition: 1s;
-  border-radius: 0.3em;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-button::after {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 3%;
-  width: 95%;
-  height: 40%;
-  background-color: #212121;
-  transition: 0.5s;
-  transform-origin: center;
-}
-
-button::before {
-  content: "";
-  transform-origin: center;
-  position: absolute;
-  top: 80%;
-  left: 3%;
-  width: 95%;
-  height: 40%;
-  background-color: #212121;
-  transition: 0.5s;
-}
-
-button:hover::before, button:hover::after {
-  transform: scale(0)
-}
-
-button:hover {
-  box-shadow: inset 0px 0px 25px #1479EA;
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 .center-text {
   font-size: 4rem; /* حجم النص */
@@ -56,29 +9,93 @@ button:hover {
   text-align: center; /* توسيط النص */
   z-index:99;
 }
-.container {
-  width: 50%;
-  margin: 0 auto;
+ body {
+  margin: 0;
+  padding: 0;
+  background-color: #e37254;
+  /* overflow: hidden; */
 }
-
-svg#flower-frame {
-  height: 90vh;
+#turtle {
+  position: absolute;
+  width: 100px; /* حجم السلحفاة */
+  height: 100px;
+  transition: transform 1s linear; /* لتنعيم الحركة */
+}
+.container {
+  height: 100vh;
+  overflow: hidden;
+}
+#couple {
+  max-height: 100%;
   width: 100%;
 }
 
+#girl-hair {
+  fill:url(#hair-gradient);
+}
+#girl-eye {
+  fill: green;
+}
 
+#girl-earring {
+  fill: #8d8d8d;
+}
+#girl-skirt, #girl-shirt {
+  fill: #791e43;
+}
+#boy-pants {
+  fill: #848487;
+}
+#boy-sleeve {
+  fill: #b8bcbb;
+}
 
-#Footer_group_1_,
-[id^=PinkFlowerGroup],
-[id^=BaseGroup] path,
-[id^=LeafGroup] path,
-path[id^=Stroke],
-g[id^=BudGroup] g[id^=BudGroup] g[id^=Bud],
-#Bud8_1_,
-#Bud10_1_,
-#Bud23_1_,
-#Bud26_1_,
-[id^=Dots],
-[id^=Flourish] {
+#boy-shirt {
+  fill: #256e89;
+}
+
+#boy-hat-1 {
+   fill: #2e6773;
+}
+#boy-hat-2 {
+   fill: #4f3723;
+}
+
+#couple,
+#heart, 
+#triangle-light
+{
   visibility: hidden;
+}
+ #triangle-light {
+  fill:url(#light-gradient);
+  fill-opacity: 0.3;
+} 
+
+#ground {
+  fill: #5c5757;
+}
+
+.heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+}
+.heart:before,
+.heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: red;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+.heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin :100% 100%;
 }
